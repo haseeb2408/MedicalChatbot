@@ -16,11 +16,11 @@ app = Flask(__name__)
 
 llm = GoogleGenerativeAI(
     model='gemini-pro' ,
-    api_key = "AIzaSyDIly_Uvnhh1i5acecax8gwfRoZUYx1YSY",
+    api_key = "Your Google Api key",
     temperature=0.4, 
     max_tokens= 500
 )
-os.environ["PINECONE_API_KEY"] = "pcsk_6Y8jK5_GXfQEuDxvySif3Ae6CW6nLSQjRPzpW2QfGNsX3kWyixVJ8riLjZ7Pew8gp3ZkeZ"
+os.environ["PINECONE_API_KEY"] = "Your PineCone APi Key"
 
 embeddings = download_hugging_face_embeddings()
 
