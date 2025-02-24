@@ -7,14 +7,14 @@ from pinecone import Pinecone
 
 
 
-os.environ['PINECONE_API_KEY'] = "pcsk_6Y8jK5_GXfQEuDxvySif3Ae6CW6nLSQjRPzpW2QfGNsX3kWyixVJ8riLjZ7Pew8gp3ZkeZ"
+os.environ['PINECONE_API_KEY'] = "Your PineCone APi"
 extracted_text = load_pdf_file(data='../Data/')
 text_chunks = text_split(extracted_data=extracted_text)
 embeddings = download_hugging_face_embeddings()
 
 
 
-pc = Pinecone(api_key = "pcsk_6Y8jK5_GXfQEuDxvySif3Ae6CW6nLSQjRPzpW2QfGNsX3kWyixVJ8riLjZ7Pew8gp3ZkeZ")
+pc = Pinecone(api_key = "Your Pinecone api")
 index_name = "medchatbot"
 
 pc.create_index(
