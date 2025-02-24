@@ -7,6 +7,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from src.prompt import *
 import os
 from langchain_google_genai import GoogleGenerativeAI
+from api_keys import Google_API_KEY , PINECONE_CLOUD_API
 
 
 
@@ -16,11 +17,11 @@ app = Flask(__name__)
 
 llm = GoogleGenerativeAI(
     model='gemini-pro' ,
-    api_key = "Your Google Api key",
+    api_key = Google_API_KEY,
     temperature=0.4, 
     max_tokens= 500
 )
-os.environ["PINECONE_API_KEY"] = "Your PineCone APi Key"
+os.environ["PINECONE_API_KEY"] = PINECONE_CLOUD_API
 
 embeddings = download_hugging_face_embeddings()
 
